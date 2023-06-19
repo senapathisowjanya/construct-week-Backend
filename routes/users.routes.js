@@ -7,7 +7,7 @@ const auth = require('../Middleware/auth');
 require("dotenv").config();
 const userRouter = express.Router();
 
-//registration routes
+
 userRouter.post("/register", async (req, res) => {
     const { userName, email, mobile, password } = req.body
     const regularexpression = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,}$/
